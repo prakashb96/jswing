@@ -6,7 +6,10 @@ import java.sql.Connection;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+
 import com.todo.gui.TodoAppGUI;
+import com.todo.dao.TodoAppDAO;
+import com.todo.model.Todo;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,6 +31,7 @@ public class Main {
         SwingUtilities.invokeLater(()->{
             try{
             TodoAppGUI app = new TodoAppGUI();
+            app.initializeComponents();
              app.setVisible(true);
             }
             catch(Exception e){

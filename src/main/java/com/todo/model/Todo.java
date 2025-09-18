@@ -1,4 +1,5 @@
-package com.model;
+package com.todo.model;
+
 
 import java.time.LocalDateTime;
 public class Todo {
