@@ -16,10 +16,10 @@ public class Main {
         try {
             Connection cn = DatabaseConnection.getDBConnection();
             System.out.println("Connected to database successfullyyyyyyyyyyyyyyyyy");
-            cn.close(); // ✅ Always close connections
+            cn.close(); 
         } catch (Exception e) {
             System.out.println("Connection Failed! Check output console");
-            e.printStackTrace(); // ✅ Log stack trace for debugging
+            e.printStackTrace(); 
         }
         try{
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -30,9 +30,9 @@ public class Main {
         //event dispatch thread
         SwingUtilities.invokeLater(()->{
             try{
-            TodoAppGUI app = new TodoAppGUI();
-            app.initializeComponents();
-             app.setVisible(true);
+                TodoAppGUI app = new TodoAppGUI();
+                app.initializeComponents();
+                app.setVisible(true);
             }
             catch(Exception e){
                 System.err.println("Error Starting teh application " + e.getMessage());
