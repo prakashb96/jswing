@@ -30,12 +30,11 @@ public class Main {
         //event dispatch thread
         SwingUtilities.invokeLater(()->{
             try{
-                TodoAppGUI app = new TodoAppGUI();
-                app.initializeComponents();
-                app.setVisible(true);
+                
+                new TodoAppGUI().setVisible(true);
             }
             catch(Exception e){
-                System.err.println("Error Starting teh application " + e.getMessage());
+                System.err.println("Error Starting the application " + e.getMessage());
             }
            
         });
