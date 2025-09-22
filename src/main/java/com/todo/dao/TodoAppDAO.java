@@ -21,7 +21,7 @@ import java.util.*;
 
 public class TodoAppDAO {
 
-    private static final String SELECT_ALL_TODOS = "SELECT * FROM todos ORDER BY created_at DESC";
+    private static final String SELECT_ALL_TODOS = "SELECT * FROM todos ORDER BY id ASC";
     private static final String SELECT_COMPLETED_TODOS = "SELECT * FROM todos WHERE COMPLETED = true";
     private static final String SELECT_PENDING_TODOS = "SELECT * FROM todos WHERE COMPLETED = false";
     private static final String INSERT_TODO = "INSERT INTO todos (title, description, completed, created_at, updated_at) VALUES (?, ?, ?, ?, ?)";
