@@ -19,11 +19,11 @@ public class Todo {
         this.updated_at = LocalDateTime.now();
     }
 
-    public Todo(String title, String description) {
+    public Todo(String title, String description,boolean completed) {
         this();
         this.title = title;
         this.description = description;
-        this.completed = false;
+        this.completed = completed;
     }
 
     public Todo(int id, String title, String description, boolean completed, LocalDateTime created_at, LocalDateTime updated_at) {

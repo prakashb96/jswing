@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             Connection cn = DatabaseConnection.getDBConnection();
-            System.out.println("Connected to database successfullyyyyyyyyyyyyyyyyy");
+            System.out.println("Connected to database successfully");
             cn.close(); 
         } catch (Exception e) {
             System.out.println("Connection Failed! Check output console");

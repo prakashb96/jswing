@@ -148,6 +148,8 @@ public class TodoAppGUI extends JFrame {
     }
 
 
+
+
     private void addTodo(){
         String title = titleField.getText().trim();
         String description = descriptionArea.getText().trim();
@@ -157,8 +159,7 @@ public class TodoAppGUI extends JFrame {
             return;
         }
         try {
-            Todo todo = new Todo(title,description);
-            todo.setCompleted(completed);
+            Todo todo = new Todo(title,description,completed);
             todoAppDAO.createtodo(todo);
 
             JOptionPane.showMessageDialog(this,"Todo added succesfully","Success",JOptionPane.INFORMATION_MESSAGE);
@@ -179,7 +180,7 @@ public class TodoAppGUI extends JFrame {
         int id = (int) tableModel.getValueAt(row, 0);
         String title = titleField.getText().trim();
         String description = descriptionArea.getText().trim();
-        boolean completed = completedCheckBox.isSelected();
+        boolean completed = completedCheckBox.isSelected(); 
 
         if (title.isEmpty() || description.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Title or Description is empty!", "Error", JOptionPane.WARNING_MESSAGE);
@@ -205,6 +206,7 @@ public class TodoAppGUI extends JFrame {
             JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+    
     private void deleteTodo(){
         
         int row = todoTable.getSelectedRow();
@@ -285,7 +287,7 @@ public class TodoAppGUI extends JFrame {
 
     private void loadSelectedTodo(){
         int row  = todoTable.getSelectedRow();
-        if(row >= 0){
+        if(row >= 0) {
             String title = tableModel.getValueAt(row, 1).toString();
             String description = tableModel.getValueAt(row, 2).toString();
             boolean completed = Boolean.parseBoolean(tableModel.getValueAt(row, 3).toString());
