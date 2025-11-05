@@ -16,27 +16,26 @@ public class Main {
         try {
             Connection cn = DatabaseConnection.getDBConnection();
             System.out.println("Connected to database successfully");
-            cn.close(); 
+            cn.close();
         } catch (Exception e) {
             System.out.println("Connection Failed! Check output console");
-            e.printStackTrace(); 
+            e.printStackTrace();
         }
-        try{
+        try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        }
-        catch(ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e){
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+                | UnsupportedLookAndFeelException e) {
             System.err.println("Could not set look and feel " + e.getMessage());
         }
-        //event dispatch thread
-        SwingUtilities.invokeLater(()->{
-            try{
-                
+        // event dispatch thread
+        SwingUtilities.invokeLater(() -> {
+            try {
+
                 new TodoAppGUI().setVisible(true);
-            }
-            catch(Exception e){
+            } catch (Exception e) {
                 System.err.println("Error Starting the application " + e.getMessage());
             }
-           
+
         });
     }
 }

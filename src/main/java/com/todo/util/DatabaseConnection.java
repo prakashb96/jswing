@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    public  static final String driver = "com.mysql.cj.jdbc.Driver";
-    public  static final String URL = "jdbc:mysql://localhost:3306/todo";
-    public  static final String USERNAME = "root";
-    public  static final String PASSWORD = "2005";
+    public static final String driver = "com.mysql.cj.jdbc.Driver";
+    public static final String URL = "jdbc:mysql://localhost:3306/todo";
+    public static final String USERNAME = "root";
+    public static final String PASSWORD = "2005";
     static {
         try {
             Class.forName(driver);
@@ -16,6 +16,7 @@ public class DatabaseConnection {
             System.out.println("Driver not found");
         }
     }
+
     public static Connection getDBConnection() throws SQLException {
         return DriverManager.getConnection(URL, USERNAME, PASSWORD);
     }
