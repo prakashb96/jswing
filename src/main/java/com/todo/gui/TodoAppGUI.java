@@ -70,8 +70,8 @@ public class TodoAppGUI extends JFrame {
         // Buttons
         addButton = new JButton("Add todo");
         deleteButton = new JButton("Delete todo");
-        editButton = new JButton("Update");
-        refreshButton = new JButton("Refresh");
+        editButton = new JButton("Update Todo");
+        refreshButton = new JButton("Refresh Todo");
         
         // Filter dropdown
         String[] categoryOptions = { "All", "Completed", "Pending" };
