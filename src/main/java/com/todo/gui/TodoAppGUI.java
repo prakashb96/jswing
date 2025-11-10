@@ -68,8 +68,8 @@ public class TodoAppGUI extends JFrame {
         completedCheckBox = new JCheckBox("Completed");
 
         // Buttons
-        addButton = new JButton("Add");
-        deleteButton = new JButton("Delete");
+        addButton = new JButton("Add todo");
+        deleteButton = new JButton("Delete todo");
         editButton = new JButton("Update");
         refreshButton = new JButton("Refresh");
         
