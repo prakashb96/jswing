@@ -114,7 +114,7 @@ public class TodoAppGUI extends JFrame {
 
         // Filter panel for filter label and combo box
         JPanel filterPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        filterPanel.add(new JLabel("Filter:"));
+        filterPanel.add(new JLabel("Filterr:"));
         filterPanel.add(categoryComboBox);
 
         // North panel to combine filter, input, and button panels
@@ -126,7 +126,7 @@ public class TodoAppGUI extends JFrame {
         add(northPanel, BorderLayout.NORTH);
         add(new JScrollPane(todoTable), BorderLayout.CENTER);
         JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        statusPanel.add(new JLabel("Select a todo to edit or delete from list:"));
+        statusPanel.add(new JLabel("Select a todo to editt or delete from list:"));
         add(statusPanel, BorderLayout.SOUTH);
     }
     private void clearTodo() {
