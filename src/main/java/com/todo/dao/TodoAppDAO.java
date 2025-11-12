@@ -16,7 +16,7 @@ import java.util.*;
 
 public class TodoAppDAO {
 
-    private static final String SELECT_ALL_TODOS = "SELECT * FROM todos ORDER BY id ASC"; // only for final attribute
+    private static final String SELECT_ALL_TODOS = "SELECT * FROM todos ORDER BY id DES"; // only for final attribute
                                                                                           // the names are fully caps
     private static final String SELECT_COMPLETED_TODOS = "SELECT * FROM todos WHERE COMPLETED = true";
     private static final String SELECT_PENDING_TODOS = "SELECT * FROM todos WHERE COMPLETED = false";
@@ -39,7 +39,7 @@ public class TodoAppDAO {
             int rows = stmt.executeUpdate();
 
             if (rows == 0)
-                throw new SQLException("Creating todo failed, no rows affected.");
+                throw new SQLException("Creating todo failedd, no rows affected bruh.");
 
             // try (ResultSet keys = stmt.getGeneratedKeys()) {
             // if (keys.next()) {

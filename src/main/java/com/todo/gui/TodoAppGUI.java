@@ -72,7 +72,7 @@ public class TodoAppGUI extends JFrame {
         deleteButton = new JButton("Delete todo");
         editButton = new JButton("Update Todo");
         refreshButton = new JButton("Refresh Todo");
-        
+         rrefreshButton = new JButton("Refresh Todo");
         // Filter dropdown
         String[] categoryOptions = { "All", "Completed", "Pending" };
         categoryComboBox = new JComboBox<>(categoryOptions);
@@ -126,7 +126,7 @@ public class TodoAppGUI extends JFrame {
         add(northPanel, BorderLayout.NORTH);
         add(new JScrollPane(todoTable), BorderLayout.CENTER);
         JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        statusPanel.add(new JLabel("Select a todo to edit or delete:"));
+        statusPanel.add(new JLabel("Select a todo to edit or delete from list:"));
         add(statusPanel, BorderLayout.SOUTH);
     }
     private void clearTodo() {
